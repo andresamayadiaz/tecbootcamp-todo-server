@@ -28,11 +28,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 /*
-// serve also the client
+// ALSO SERVE THE CLIENT
+// BUT WHY?
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 */
+
+// CORS
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+// END CORS
 
 // ROUTES
 var todoRouter = require('./routes/todo.routes');
