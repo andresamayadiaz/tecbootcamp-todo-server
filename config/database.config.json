@@ -6,6 +6,6 @@
         "url": "mongodb://<user>:<password>@<server>:<port>/bootcamptodo"
     },
     "production": {
-        "url": "mongodb://localhost:27017/bootcamptodo"
+        "url": "mongodb://tecbootcamp3:bootcamp123@ds233452.mlab.com:33452/tecbootcamp"
     }
 }
